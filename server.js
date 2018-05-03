@@ -45,7 +45,11 @@ app.use(helmet({
   }
 }));
 
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist', {
+  etag: true,
+  lastModified: true,
+  maxAge: '1d'
+}));
 
 app.get('/', (req, res) => {
    res.sendfile(__dirname + '/public/index.html');
