@@ -4,7 +4,9 @@
   "description": "Visualizing data from Mozilla's Facebook survey",
   "main": "dist/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-prebuild": "npm install pm2 -g",
+    "heroku-postbuild": "gulp build"
   },
   "author": "Vojtech Sedlak",
   "devDependencies": {
@@ -28,7 +30,10 @@
     "d3": "^5.1.0",
     "express": "^4.16.3",
     "habitat": "^3.1.2",
-    "jquery": "^3.3.1"
+    "helmet": "^3.12.0",
+    "jquery": "^3.3.1",
+    "morgan": "^1.9.0",
+    "pm2": "^2.10.3"
   },
   "license": "MIT"
 }
