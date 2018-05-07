@@ -38,7 +38,7 @@ app.use(helmet({
       baseUri: ['\'self\''],
       styleSrc: ['\'self\'', '\'unsafe-inline\'', 'https://use.fontawesome.com'],
       fontSrc: ['\'self\'', 'https://use.fontawesome.com'],
-      imgSrc: ['\'self\'', 'data:', '*.shpg.org'],
+      imgSrc: ['\'self\'', 'data:', '*.shpg.org', 'https://www.google-analytics.com'],
       objectSrc: ['\'self\''],
       sandbox: ['allow-scripts', 'allow-same-origin']
     }
